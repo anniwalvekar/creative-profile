@@ -1,0 +1,124 @@
+:root{
+    --color-primary:#ce1446;
+    --color-secondary:#ffffff;
+    --color-bg:#000000;
+    --color-bg01:#0c0b0b;
+    --color-bg02:#121212;
+    --color-bg1:#f71854;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #777;
+    line-height: 1.8;
+}
+a{
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+a:hover{
+    color: #ff004c;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/***************************************/
+/*       Navbar       */
+/*****************************************/
+.navbar{
+    background-color: #000;
+    
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    flex: none;
+}
+.logo img{
+    width: 6rem;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+.nav-list .nav-item{
+color: var(--color-secondary);
+margin-left: 2rem;
+text-transform: uppercase;
+font-weight: 600;
+font-size: 1.2rem;
+letter-spacing: 0.5px;
+text-align: end;
+}
+.nav-list .nav-item:hover{
+    color: var(--color-primary);
+}
+.nav-toggler{
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.nav-toggler:hover{
+    color: var(--color-primary);
+}
+
+@media(max-width: 768px) {
+    .nav-list{
+  position: absolute;
+    background-color: #ce1446;
+    width: 100%;
+    top: 100%;
+    left:-100%;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    }
+    .nav-list .nav-item{
+        margin-top:0.5rem;
+        display: block;
+    }
+    .nav-toggler{
+        display: flex;
+    }
+    .show{
+        left: 0;
+    }
+}
